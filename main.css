@@ -102,13 +102,18 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-
-
-#accueil {
+.acceuil {
     margin-top: 60px; 
+    text-align: center;
+    padding: 50px 0;
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+
 }
 
-.accueil-title { 
+.acceuil-title {
+    
     color: white; 
     margin-bottom: 20px; 
     margin-left: 20px; 
@@ -146,10 +151,7 @@ nav ul li:hover {
 }
 
 
-#accueil {
-    text-align: center;
-    padding: 50px 0;
-}
+
 
 .container {
     display: flex;
@@ -490,13 +492,9 @@ footer {
     transform: scale(1.2);
 }
 
-.scroll-section {
-    opacity: 0; 
-    transform: translateY(50px); 
-    transition: opacity 0.5s ease, transform 0.5s ease; 
-}
 
-.scroll-section.visible {
+
+.accueil.visible {
     opacity: 1; 
     transform: translateY(0); 
 }
