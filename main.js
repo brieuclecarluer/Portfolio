@@ -25,14 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href'); // Récupère le href
             const targetElement = document.querySelector(targetId); // Sélectionne l'élément cible
 
-            // Récupère la hauteur de la fenêtre et de l'élément cible
             const windowHeight = window.innerHeight;
             const elementHeight = targetElement.offsetHeight;
 
-            // Calcule la position de défilement
             const scrollPosition = targetElement.offsetTop - (windowHeight - elementHeight) / 2;
 
-            // Défilement fluide 
             window.scrollTo({
                 top: scrollPosition,
                 behavior: 'smooth'
