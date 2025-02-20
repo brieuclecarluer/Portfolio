@@ -18,12 +18,12 @@ function detecterSectionEntree() {
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a');
 
-    // Ajoute un gestionnaire d'événements nav bar
+    //un gestionnaire d'événements nav bar
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            const targetId = this.getAttribute('href'); // Récupère le href
-            const targetElement = document.querySelector(targetId); // Sélectionne l'élément cible
+            const targetId = this.getAttribute('href'); 
+            const targetElement = document.querySelector(targetId); 
 
             const windowHeight = window.innerHeight;
             const elementHeight = targetElement.offsetHeight;
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const accueilSection = document.getElementById('accueil');
     accueilSection.scrollIntoView({ behavior: 'smooth' });
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.scroll-section');
@@ -76,13 +77,13 @@ window.addEventListener('scroll', function() {
     }
   });
 
-
-  const portfolioSlider = document.querySelector('.portfolio-slider');
+//portfolio carroussel de fin
+const portfolioSlider = document.querySelector('.portfolio-slider');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 const totalItems = portfolioItems.length;
 
 let currentIndex = 0;
-const visibleItems = 3; 
+let visibleItems = window.innerWidth <= 768 ? 1 : 3; // 1 élément sur mobile, 3 sur desktop
 
 function updateSlider() {
     const itemWidth = portfolioItems[0].offsetWidth + 30; 
@@ -92,7 +93,6 @@ function updateSlider() {
     document.querySelector('.left-arrow').style.display = currentIndex === 0 ? 'none' : 'flex';
     document.querySelector('.right-arrow').style.display = currentIndex >= totalItems - visibleItems ? 'none' : 'flex';
 }
-
 
 function prevSlide() {
     if (currentIndex > 0) {
@@ -107,6 +107,12 @@ function nextSlide() {
         updateSlider();
     }
 }
+
+window.addEventListener('resize', () => {
+    visibleItems = window.innerWidth <= 768 ? 1 : 3;
+    currentIndex = 0;
+    updateSlider();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     currentIndex = 0; 
