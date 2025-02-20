@@ -76,50 +76,48 @@ window.addEventListener('scroll', function() {
       });
     }
   });
+  const portfolioSlider = document.querySelector('.portfolio-slider');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  const totalItems = portfolioItems.length;
+  
+  let currentIndex = 0;
+  let visibleItems = window.innerWidth <= 768 ? 1 : 3; 
+  function updateSlider() {
+      const itemWidth = portfolioItems[0].offsetWidth + 20; 
+      const offset = -currentIndex * itemWidth; 
+      portfolioSlider.style.transform = `translateX(${offset}px)`;
+  
+      document.querySelector('.left-arrow').style.display = currentIndex === 0 ? 'none' : 'flex';
+      document.querySelector('.right-arrow').style.display = currentIndex >= totalItems - visibleItems ? 'none' : 'flex';
+  }
+  
+  function prevSlide() {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+      }
+  }
 
-const portfolioSlider = document.querySelector('.portfolio-slider');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-const totalItems = portfolioItems.length;
+  function nextSlide() {
+      if (currentIndex < totalItems - visibleItems) {
+          currentIndex++;
+          updateSlider();
+      }
+  }
 
-let currentIndex = 0;
-let visibleItems = window.innerWidth <= 768 ? 1 : 3; 
-
-function updateSlider() {
-    const itemWidth = portfolioItems[0].offsetWidth + 20;
-    const offset = -currentIndex * itemWidth; 
-    portfolioSlider.style.transform = `translateX(${offset}px)`; 
-    document.querySelector('.left-arrow').style.display = currentIndex === 0 ? 'none' : 'flex';
-    document.querySelector('.right-arrow').style.display = currentIndex >= totalItems - visibleItems ? 'none' : 'flex';
-}
-
-function prevSlide() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-    }
-}
-
-function nextSlide() {
-    if (currentIndex < totalItems - visibleItems) {
-        currentIndex++;
-        updateSlider();
-    }
-}
-
-
-window.addEventListener('resize', () => {
-    visibleItems = window.innerWidth <= 768 ? 1 : 3;
-    currentIndex = Math.min(currentIndex, totalItems - visibleItems); 
-    updateSlider();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    currentIndex = 0;
-    updateSlider();
-});
-
-document.querySelector('.left-arrow').addEventListener('click', prevSlide);
-document.querySelector('.right-arrow').addEventListener('click', nextSlide);
+  window.addEventListener('resize', () => {
+      visibleItems = window.innerWidth <= 768 ? 1 : 3;
+      currentIndex = Math.min(currentIndex, totalItems - visibleItems); 
+      updateSlider();
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+      currentIndex = 0;
+      updateSlider();
+  });
+  
+  document.querySelector('.left-arrow').addEventListener('click', prevSlide);
+  document.querySelector('.right-arrow').addEventListener('click', nextSlide);
 
 //burger
 document.getElementById("burger-btn").addEventListener("click", function () {
