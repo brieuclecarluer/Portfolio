@@ -83,7 +83,7 @@ window.addEventListener('scroll', function() {
   let currentIndex = 0;
   let visibleItems = window.innerWidth <= 768 ? 1 : 3; 
   function updateSlider() {
-      const itemWidth = portfolioItems[0].offsetWidth + 20; 
+      const itemWidth = portfolioItems[0].offsetWidth + 22; 
       const offset = -currentIndex * itemWidth; 
       portfolioSlider.style.transform = `translateX(${offset}px)`;
   
