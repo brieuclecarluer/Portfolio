@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');/*titre*/
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');/*font de texte*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
 
 /* Typography */
 p {
-  font-family: "Figtree", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
-  color: #555; /* Changed to a softer grey */
 }
+
 
 label.nav-toggle {
   width: 40px;
@@ -24,17 +22,6 @@ label.nav-toggle {
 }
 
 /*Mes Fonts*/
-.jersey-20-regular {
-  font-family: "Jersey 20", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.boldonse-regular {
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
 .figtree {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
@@ -42,6 +29,14 @@ label.nav-toggle {
   font-style: normal;
 }
 
+.climate-crisis {
+  font-family: "Climate Crisis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "YEAR" 1979;
+}
 
 body {
   margin: 0px;
@@ -49,34 +44,52 @@ body {
 
 body, h1, h2, h3, p, label, input, textarea, button {
   color: #555; 
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 80px;
   color: #cc3333; 
+  font-family: "Climate Crisis", sans-serif;
   font-optical-sizing: auto;
-  font-family: "Boldonse", system-ui;
   font-weight: 400;
   font-style: normal;
+  font-variation-settings:
+    "YEAR" 1979;
 }
 
 h2 {
   font-size: 45px;
   color: #cc3333;
   text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 h3 {
   font-size: 30px;
-  color: #cc3333; 
+  color: #cc3333;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal; 
 }
 
 header, nav ul li a {
   color: #ffffff;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 header {
-  background-color: #cc3333f1; 
+  background-color: #cc3333e6; 
   border-radius: 25px;
   padding: 10px 0;
   position: fixed;
@@ -150,7 +163,10 @@ nav ul li a:hover {
 }
 
 .portfolio-h2 {
-  font-family: "Figtree", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 nav ul li:hover {
