@@ -63,19 +63,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.addEventListener('scroll', function() {
-    const skillsSection = document.getElementById('skills');
+document.addEventListener('DOMContentLoaded', function() {
     const skillBars = document.querySelectorAll('.progress-bar');
-    const sectionPosition = skillsSection.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.15;
-  
-    if (sectionPosition < screenPosition) {
-      skillBars.forEach(skillBar => {
-        const skillLevel = skillBar.getAttribute('data-skill-level');
-        skillBar.style.width = skillLevel;
-      });
-    }
-  });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const skillBar = entry.target;
+            const skillLevel = skillBar.getAttribute('data-skill-level');
+
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    skillBar.style.transition = "width 1s ease-in-out"; 
+                    skillBar.style.width = skillLevel;
+                }, 100); 
+            } else {
+                skillBar.style.transition = "none"; 
+                skillBar.style.width = "0"; 
+            }
+        });
+    }, { threshold: 0.4 }); 
+
+    skillBars.forEach(skillBar => observer.observe(skillBar));
+});
+
   const portfolioSlider = document.querySelector('.portfolio-slider');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const totalItems = portfolioItems.length;
