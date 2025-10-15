@@ -133,3 +133,43 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("burger-btn").addEventListener("click", function () {
     document.querySelector("header").classList.toggle("show-nav");
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.parcours-item');
+  const nextBtn = document.getElementById('nextParcours');
+  const prevBtn = document.getElementById('prevParcours');
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.classList.toggle('active', index === currentIndex);
+    });
+    const offset = -currentIndex * 100;
+    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < items.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  // toggle déroulant
+  document.querySelectorAll('.toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.closest('.parcours-item');
+      parent.classList.toggle('expanded');
+    });
+  });
+
+  updateCarousel();
+});

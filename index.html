@@ -113,26 +113,53 @@
 
 
         <section id="parcours" class="scroll-section">
-            <h2>Parcours</h2>
-            <div class="timeline">
-                <div class="event">
-                    <div class="date">2019</div>
-                    <div class="description">Bénévole dans un Magasin de Fleurs</div>
-                </div>
-                <div class="event">
-                    <div class="date">2023</div>
-                    <div class="description">Baccalauréat Scientifique</div>
-                </div>
-                <div class="event">
-                    <div class="date">2024</div>
-                    <div class="description">Employer à Decathlon</div>
-                </div>
-                <div class="event">
-                    <div class="date">2028</div>
-                    <div class="description">Diplome d'Ingenieur en Informatique</div>
-                </div>
-            </div>
-        </section>
+  <h2>Parcours</h2>
+  
+  <div class="carousel-container">
+    <button class="arrow left" id="prevParcours">&#10094;</button>
+    
+    <div class="carousel">
+      <div class="parcours-item active">
+        <img src="img/fleurs.jpg" alt="Magasin de Fleurs">
+        <h3>2019</h3>
+        <button class="toggle">&#9660;</button>
+        <div class="parcours-content">
+          <p>Bénévole dans un Magasin de Fleurs</p>
+        </div>
+      </div>
+
+      <div class="parcours-item">
+        <img src="img/bac.jpg" alt="Baccalauréat Scientifique">
+        <h3>2023</h3>
+        <button class="toggle">&#9660;</button>
+        <div class="parcours-content">
+          <p>Baccalauréat Scientifique</p>
+        </div>
+      </div>
+
+      <div class="parcours-item">
+        <img src="img/decathlon.jpg" alt="Decathlon">
+        <h3>2024</h3>
+        <button class="toggle">&#9660;</button>
+        <div class="parcours-content">
+          <p>Employé à Decathlon</p>
+        </div>
+      </div>
+
+      <div class="parcours-item">
+        <img src="img/ingenieur.jpg" alt="Diplôme d'Ingénieur">
+        <h3>2028</h3>
+        <button class="toggle">&#9660;</button>
+        <div class="parcours-content">
+          <p>Diplôme d'Ingénieur en Informatique</p>
+        </div>
+      </div>
+    </div>
+    
+    <button class="arrow right" id="nextParcours">&#10095;</button>
+  </div>
+</section>
+
 
         <section id="projets" class="scroll-section">
           <h2>Projets</h2>
