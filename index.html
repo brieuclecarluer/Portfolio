@@ -1,257 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Brieuc Le Carluer - Portfolio</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="assets/2.png" />
 </head>
 <body>
-    <header>
-        <div class="burger" id="burger-btn">
-            &#9776; 
-        </div>
-        <nav class="jersey-20-regular">
-            <ul>
-                <li><a href="#accueil">Mon Portfolio</a></li>
-                <li><a href="#presentation">Présentation</a></li>
+    <header id="header">
+        <nav>
+            <div class="logo">BLC</div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#presentation">À propos</a></li>
                 <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#projets">Projets</a></li>
             </ul>
         </nav>
     </header>
-    
 
-    <main>
-        <section id="accueil" class="scroll-section">
-            <div class="container">
-                <div class="left">
-                    <h1>BRIEUC<br>LE CARLUER</h1>
-                    <h3>Étudiant ingénieur en Informatique à Polytech</h3>
-                    <p>“The computer was born to solve problems that did not exist before.”</p>
-                    <a href="assets/CV.pdf" class="btn-cv">Télécharger mon CV</a>
-                </div>
-                <div class="right">
-                    <img src="assets/IMG_2541.jpeg" alt="Votre portrait" class="portrait">
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>BRIEUC<br>LE CARLUER</h1>
+                <h2>Étudiant ingénieur en Informatique à Polytech</h2>
+                <p>"The computer was born to solve problems that did not exist before."</p>
+                <a href="assets/CV.pdf" class="btn-cv">Télécharger mon CV</a>
+            </div>
+            <div class="hero-image">
+              <a href="https://www.linkedin.com/in/brieuc-le-carluer-115844304/">
+                <img src="assets/IMG_2541.jpeg" alt="Brieuc Le Carluer">
+              </a>
+                 
+            </div>
+        </div>
+    </section>
+
+    <section id="presentation">
+        <h2 class="section-title">À propos</h2>
+        <p>Étudiant en 2ème année en école d'ingénieurs à Polytech, je suis passionné par les nouvelles technologies et les langages de programmation. Envisageant une spécialisation dans la programmation de jeux vidéo, et dans l'objectif de compléter ma formation d'ingénieur, je suis actuellement à la recherche d'emplois dans ce secteur.</p>
+    </section>
+
+    <section id="parcours">
+        <h2 class="section-title">Parcours professionnel</h2>
+
+        <div class="experience-item">
+            <div class="experience-image">
+                <img src="assets/decathlon.png" alt="Decathlon">
+            </div>
+            <div class="experience-content">
+                <h3>Employé saisonnier - Decathlon</h3>
+                <div class="date">Juillet - Août 2024</div>
+                <p>Déchargement de camion, mise en rayon de marchandises. Cette expérience m'a appris la rigueur et l'efficacité dans un environnement dynamique, tout en développant mes capacités d'adaptation et d'organisation.</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-image">
+                <img src="assets/acoss.png" alt="Stage ingénieur">
+            </div>
+            <div class="experience-content">
+                <h3>Stage - ACOSS Nantes</h3>
+                <div class="date">Avril 2025 - Juin 2025</div>
+                <p>Participation active au monitoring d'outils forensiques tels qu'ELK, TheHive et Velociraptor. Participation à la mise en œuvre de procédures de MCO des machines du COS. Ce stage était extremement enrichissant et m'as permis d'en apprendre enormement sur la place de la cybersecurité en entreprise.</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-image">
+                <img src="assets/gouessant.jpg" alt="Coopérative du Gouessant">
+            </div>
+            <div class="experience-content">
+                <h3>Employé Saisonnier - Coopérative du Gouessant</h3>
+                <div class="date">Juin - Août 2025</div>
+                <p>Réception des tracteurs, chargement de camion, gestion de magasin pour particulier. Cette première expérience dans le monde de l'agriculture et en petite équipe sur site m'as permis de bien comprendre les enjeux d'une bonne coordination, tout en développant mes compétences en service client et en soulignant l'importance du travail en autonomie quand il s'agit de gérer des tâches variées.</p>
+            </div>
+        </div>
+
+        <div class="travel-section">
+            <h3>Ma passion : la photographie</h3>
+            <div class="travel-slider">
+                <div class="travel-image-container">
+                    <img id="travelImage" src="assets/stemilion.jpeg" alt="Voyage">
+                    <div class="travel-overlay">
+                        <h4 id="travelTitle">Exploration urbaine</h4>
+                        <p id="travelDescription">Découvrir de nouvelles villes, seul ou entre amis, pour s'immerger dans différentes cultures et architectures. Ma préférée restera l'architecture romaine.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        
-        
-
-        <section id="presentation" class="scroll-section">
-            <h2>Qui suis-je?</h2>
-            <p>Étudiant en 2eme année en école d'ingénieurs à Polytech,
-                 je suis passionné par les nouvelles technologies et les langages de programmation.<br> 
-                 Envisageant une spécialisation dans la programmation de jeux vidéo, 
-                 et dans l'objectif de compléter ma formation d'ingénieur, 
-                 je suis actuellement à la recherche d'emplois dans ce secteur.</p>
-        </section>
-        <section id="services" class="scroll-section">
-            <h2>Mes compétences</h2>
-            
-            
-            <!-- Skills Bars Section -->
-            <div id="skills">
-    
-                <div class="skill-bar">
-                  <img src="logo/html.png" alt="HTML Logo" class="skill-logo">
-                  <div class="progress">
-                    <div class="progress-bar" data-skill-level="95%"></div>
-                  </div>
-                </div>
-                
-                <div class="skill-bar">
-                  <img src="logo/css.png" alt="CSS Logo" class="skill-logo">
-                  <div class="progress">
-                    <div class="progress-bar" data-skill-level="85%"></div>
-                  </div>
-                </div>
-
-                <div class="skill-bar">
-                    <img src="logo/js.png" alt="JavaScript Logo" class="skill-logo">
-                    <div class="progress">
-                      <div class="progress-bar" data-skill-level="70%"></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-bar">
-                    <img src="logo/go.png" alt="Golang Logo" class="skill-logo">
-                    <div class="progress">
-                      <div class="progress-bar" data-skill-level="65%"></div>
-                    </div>
-                  </div>
-                
-                <div class="skill-bar">
-                  <img src="logo/kotlin.png" alt="Kotlin Logo" class="skill-logo">
-                  <div class="progress">
-                    <div class="progress-bar" data-skill-level="75%"></div>
-                  </div>
-                </div>
-                
-                <div class="skill-bar">
-                  <img src="logo/python.png" alt="Python Logo" class="skill-logo">
-                  <div class="progress">
-                    <div class="progress-bar" data-skill-level="80%"></div>
-                  </div>
-                </div>
-                
-                <div class="skill-bar">
-                  <img src="logo/sql.png" alt="SQL Logo" class="skill-logo">
-                  <div class="progress">
-                    <div class="progress-bar" data-skill-level="80%"></div>
-                  </div>
-                </div>
-                
-                
-                
-              </div>
-            </section>
-
-
-        <section id="parcours" class="scroll-section">
-  <h2>Parcours</h2>
-  
-  <div class="carousel-container">
-    <button class="arrow left" id="prevParcours">&#10094;</button>
-    
-    <div class="carousel">
-      <div class="parcours-item active">
-        <img src="img/fleurs.jpg" alt="Magasin de Fleurs">
-        <h3>2019</h3>
-        <button class="toggle">&#9660;</button>
-        <div class="parcours-content">
-          <p>Bénévole dans un Magasin de Fleurs</p>
-        </div>
-      </div>
-
-      <div class="parcours-item">
-        <img src="img/bac.jpg" alt="Baccalauréat Scientifique">
-        <h3>2023</h3>
-        <button class="toggle">&#9660;</button>
-        <div class="parcours-content">
-          <p>Baccalauréat Scientifique</p>
-        </div>
-      </div>
-
-      <div class="parcours-item">
-        <img src="img/decathlon.jpg" alt="Decathlon">
-        <h3>2024</h3>
-        <button class="toggle">&#9660;</button>
-        <div class="parcours-content">
-          <p>Employé à Decathlon</p>
-        </div>
-      </div>
-
-      <div class="parcours-item">
-        <img src="img/ingenieur.jpg" alt="Diplôme d'Ingénieur">
-        <h3>2028</h3>
-        <button class="toggle">&#9660;</button>
-        <div class="parcours-content">
-          <p>Diplôme d'Ingénieur en Informatique</p>
-        </div>
-      </div>
-    </div>
-    
-    <button class="arrow right" id="nextParcours">&#10095;</button>
-  </div>
-</section>
-<!-- change -->
-
-        <section id="projets" class="scroll-section">
-          <h2>Projets</h2>
-          <div class="portfolio-container">
-              <div class="arrow left-arrow" onclick="prevSlide()">&#10094;</div>
-      
-              <div class="portfolio-slider">
-                  <!-- Projet 1 -->
-                  <div class="portfolio-item" onclick="window.open('https://github.com/brieuclecarluer/Portfolio','_blank');">
-                      <h3>Portfolio</h3>
-                      <img src="assets/projets/portfolio.png" alt="Projet 1">
-                      <p>-Voici le code de mon projet<br> -HTML/CSS/JS</p>
-                  </div>
-      
-                  <!-- Projet 2 -->
-                  <div class="portfolio-item" onclick="window.open('https://github.com/brieuclecarluer/Terratruck/','_blank');">
-                      <h3>Terratruck</h3>
-                      <img src="assets/projets/terratruck.png" alt="Projet 2">
-                      <p>-Site vitrine <br> -HTML/CSS <br> -TCP</p>
-                  </div>
-      
-                  <!-- Projet 3 -->
-                  <div class="portfolio-item" onclick="window.open('https://github.com/brieuclecarluer/PFC/tree/main','_blank');">
-                      <h3>Pierre Feuille Ciseau</h3>
-                      <img src="assets/projets/pfc.png" alt="Projet 3">
-                      <p>-Pierre Feuille Ciseau sur terminal<br>-Python</p>
-                  </div>
-      
-                  <!-- Projet 4 -->
-                  <div class="portfolio-item" onclick="window.open('https://github.com/brieuclecarluer/Chatbot-avec-API','_blank');">
-                      <h3>Chatbot-avec-API</h3>
-                      
-                      <p>-Chatbot<br>-Pas d'API<br>-Python</p>
-                  </div>
-
-                  <!-- Projet 5 -->
-                  <div class="portfolio-item" onclick="window.open('https://github.com/brieuclecarluer/Quadtree','_blank');">
-                    <h3>Quadtree</h3>
-                    <img src="assets/projets/golang.png" alt="Projet 5">
-                    <p>-Projet de fin d'Année<br>-Golang</p>
-                </div>
-
-                  <!-- Projet 6 -->
-                <div class="portfolio-item" onclick="window.open('https://brieuclecarluer.github.io/Terrier/', '_blank');">
-                  <h3>Terrier</h3>
-                  <img src="assets/projets/terrier.png" alt="Projet 6">
-                  <p>-Plateformer<br>-HTML/JS</p>
-                </div>
-
-                <!-- Projet 7 -->
-                <div class="portfolio-item" onclick="window.open('https://gitlab.univ-nantes.fr/E235508M/laurelin','_blank');">
-                  <h3>Laurelin</h3>
-                  <img src="assets/projets/laurelin.png" alt="Projet ">
-                  <p>-Web Site<br>-Projet Scolaire<br>-VueJS/PHP</p>
-              </div>
-
-              <!-- Projet 8 -->
-              <div class="portfolio-item" onclick="window.open('https://github.com/brieuclecarluer/Kad','_blank');">
-                <h3>Kad</h3>
-                <img src="assets/projets/kad.png" alt="Projet 8">
-                <p>-Jeu<br>-JS</p>
+            <div class="travel-nav">
+                <span class="travel-dot active" data-index="0"></span>
+                <span class="travel-dot" data-index="1"></span>
+                <span class="travel-dot" data-index="2"></span>
             </div>
+        </div>
+    </section>
 
+    <section id="projets">
+        <h2 class="section-title">Mes projets</h2>
+        <div class="projects-carousel">
+            <button class="carousel-nav prev" id="prevProject">‹</button>
+            <div class="projects-wrapper">
+                <div class="projects-track" id="projectsTrack">
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Portfolio','_blank')">
+                        <img src="assets/projets/portfolio.png" alt="Portfolio" class="project-image">
+                        <div class="project-content">
+                            <h3>Portfolio</h3>
+                            <p>Voici le code de mon projet - HTML/CSS/JS</p>
+                        </div>
+                    </div>
 
-                
-      
-              </div>
-      
-              <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
-          </div>
-      </section>
-      
-        
-        
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Terratruck/','_blank')">
+                        <img src="assets/projets/terratruck.png" alt="Terratruck" class="project-image">
+                        <div class="project-content">
+                            <h3>Terratruck</h3>
+                            <p>Site vitrine - HTML/CSS - TCP</p>
+                        </div>
+                    </div>
 
-    </main>
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/PFC/tree/main','_blank')">
+                        <img src="assets/projets/pfc.png" alt="Pierre Feuille Ciseau" class="project-image">
+                        <div class="project-content">
+                            <h3>Pierre Feuille Ciseau</h3>
+                            <p>Pierre Feuille Ciseau sur terminal - Python</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Chatbot-avec-API','_blank')">
+                        <div class="project-content">
+                            <h3>Chatbot-avec-API</h3>
+                            <p>Chatbot - Pas d'API - Python</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Quadtree','_blank')">
+                        <img src="assets/projets/golang.png" alt="Quadtree" class="project-image">
+                        <div class="project-content">
+                            <h3>Quadtree</h3>
+                            <p>Projet de fin d'année - Golang</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="window.open('https://brieuclecarluer.github.io/Terrier/', '_blank')">
+                        <img src="assets/projets/terrier.png" alt="Terrier" class="project-image">
+                        <div class="project-content">
+                            <h3>Terrier</h3>
+                            <p>Platformer - HTML/JS</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="window.open('https://gitlab.univ-nantes.fr/E235508M/laurelin','_blank')">
+                        <img src="assets/projets/laurelin.png" alt="Laurelin" class="project-image">
+                        <div class="project-content">
+                            <h3>Laurelin</h3>
+                            <p>Web Site - Projet Scolaire - VueJS/PHP</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Kad','_blank')">
+                        <img src="assets/projets/kad.png" alt="Kad" class="project-image">
+                        <div class="project-content">
+                            <h3>Kad</h3>
+                            <p>Jeu - JS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-nav next" id="nextProject">›</button>
+        </div>
+    </section>
+
     <footer>
-        <div class="logo-container">
-            <a href="https://www.linkedin.com/in/brieuc-le-carluer-115844304/"><img src="logo/linkdn.png" alt="Logo LinkedIn"></a>
-            <a href="mailto:brieuclecarluerpro@gmail.com"><img src="logo/mail.png" alt="Logo Mail"></a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/brieuc-le-carluer-115844304/">
+                <img src="logo/linkdn.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:brieuclecarluerpro@gmail.com">
+                <img src="logo/mail.png" alt="Email">
+            </a>
         </div>
-        
-        <p id="location">Rennes, Bretagne, France</p>
-        <p id="copyright">© 2024 Brieuc Le Carluer. Tous droits réservés.</p>
+        <p>Rennes, Bretagne, France</p>
+        <p>© 2024 Brieuc Le Carluer. Tous droits réservés.</p>
     </footer>
-    
 
     <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-
