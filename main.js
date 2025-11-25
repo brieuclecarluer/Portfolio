@@ -62,7 +62,7 @@ const travelData = [
     {
         image: 'assets/chien.jpeg',
         title: 'Photographie Animalière',
-        description: 'Après un roadtrip sur la cote ouest Francaise, j\'ai eu la chance de capturer ce moment avec un chien très joueur a Clisson.'
+        description: 'Après un roadtrip sur la cote ouest Française, j\'ai eu la chance de capturer ce moment avec un chien très joueur à Clisson.'
     },
     {
         image: 'assets/stmalo.jpeg',
