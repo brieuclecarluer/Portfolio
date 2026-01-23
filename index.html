@@ -10,41 +10,51 @@
 <body>
     <header id="header">
         <nav>
-            <div class="logo">BLC</div>
+            <a href="#hero" class="logo">BLC</a>
             <div class="burger" id="burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul id="nav-menu">
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#presentation">À propos</a></li>
-                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#parcours">Experiences</a></li>
+                <li><a href="#presentation">À Propos de moi</a></li>
                 <li><a href="#projets">Projets</a></li>
+                <li><a href="assets/CV.pdf" class="discover-btn">Mon Cv</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>BRIEUC<br>LE CARLUER</h1>
-                <h2>Étudiant ingénieur en Informatique à l'IUT de Nantes</h2>
-                <p>"The computer was born to solve problems that did not exist before."</p>
-                <a href="assets/CV.pdf" class="btn-cv">Télécharger mon CV</a>
+     <section id="hero">
+        <div class="hero-container">
+            <div class="hero-text-zone">
+                <h1 class="hero-title">Brieuc Le Carluer</h1>
+                <h2 class="hero-subtitle">Cybersécurité</h2>
+                <h2 class="hero-subtitle">Étudiant ingénieur</h2>
+                <div class="hero-divider"></div>
+                <p class="hero-tagline">Étudiant en 3ème année à l'IUT de Nantes</p>
+                <p class="hero-tagline">Passionné par les nouvelles technologies</p>
+                <p class="hero-tagline">À la recherche d'opportunités innovantes</p>
             </div>
-            <div class="hero-image">
-              <a href="https://www.linkedin.com/in/brieuc-le-carluer-115844304/">
-                <img src="assets/IMG_2541.jpeg" alt="Brieuc Le Carluer">
-              </a>
-                 
+            <div class="hero-image-zone">
+                <img src="assets/stmalo.jpeg" alt="Brieuc Le Carluer">
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-circle">
+                <div class="scroll-ring" id="scrollRing"></div>
+                <span class="scroll-label">SCROLL</span>
+                <span class="scroll-label">DOWN</span>
+                <div class="scroll-arrow">↓</div>
             </div>
         </div>
     </section>
 
     <section id="presentation">
         <h2 class="section-title">À propos</h2>
-        <p>Étudiant en 3ème année à l'IUT de Nantes, je suis passionné par les nouvelles technologies et les langages de programmation. Envisageant une spécialisation dans la cybersecurité, et dans l'objectif de compléter ma formation d'ingénieur, je suis actuellement à la recherche d'un stage dans ce secteur.</p>
+        <p>Étudiant en 3ème année à l'IUT de Nantes, je suis passionné par les nouvelles technologies et les langages de programmation. Envisageant une spécialisation dans la cybersécurité, et dans l'objectif de compléter ma formation d'ingénieur, je suis actuellement à la recherche d'un stage dans ce secteur.</p>
     </section>
 
     <section id="parcours">
@@ -79,7 +89,7 @@
             <div class="experience-content">
                 <h3>Employé Saisonnier - Coopérative du Gouessant</h3>
                 <div class="date">Juin - Août 2025</div>
-                <p>Réception des tracteurs, chargement de camion, gestion de magasin pour particulier. Cette première expérience dans le monde de l'agriculture et en petite équipe sur site m'as permis de bien comprendre les enjeux d'une bonne coordination, tout en développant mes compétences en service client et en soulignant l'importance du travail en autonomie quand il s'agit de gérer des tâches variées.</p>
+                <p>Réception des tracteurs, chargement de camion, gestion de magasin pour particulier. Cette première expérience dans le monde de l'agriculture et en petite équipe sur site m'as permis de bien comprendre les enjeux d'une bonne coordination.</p>
             </div>
         </div>
 
@@ -90,7 +100,7 @@
                     <img id="travelImage" src="assets/stemilion.jpeg" alt="Voyage">
                     <div class="travel-overlay">
                         <h4 id="travelTitle">Exploration urbaine</h4>
-                        <p id="travelDescription">Découvrir de nouvelles villes, seul ou entre amis, pour s'immerger dans différentes cultures et architectures. Ma préférée restera l'architecture romaine.</p>
+                        <p id="travelDescription">Découvrir de nouvelles villes, seul ou entre amis, pour s'immerger dans différentes cultures et architectures.</p>
                     </div>
                 </div>
             </div>
@@ -132,13 +142,6 @@
                         </div>
                     </div>
 
-                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Chatbot-avec-API','_blank')">
-                        <div class="project-content">
-                            <h3>Chatbot-avec-API</h3>
-                            <p>Chatbot - Pas d'API - Python</p>
-                        </div>
-                    </div>
-
                     <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Quadtree','_blank')">
                         <img src="assets/projets/golang.png" alt="Quadtree" class="project-image">
                         <div class="project-content">
@@ -163,11 +166,18 @@
                         </div>
                     </div>
 
-                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Kad','_blank')">
-                        <img src="assets/projets/kad.png" alt="Kad" class="project-image">
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/MicroService_Scan_Ordonnance-','_blank')">
+                        <img src="assets/projets/OCR.png" alt="OCR" class="project-image">
                         <div class="project-content">
-                            <h3>Kad</h3>
-                            <p>Jeu - JS</p>
+                            <h3>Scanneur d'ordonance</h3>
+                            <p>Projet Scolaire - Spring Boot</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/','_blank')">
+                        <div class="project-content">
+                            <h3>Poké-mod - à venir</h3>
+                            <p>Jeu - C - Mod</p>
                         </div>
                     </div>
                 </div>

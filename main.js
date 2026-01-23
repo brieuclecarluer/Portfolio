@@ -36,6 +36,27 @@ document.addEventListener('click', (e) => {
     }
 });
 
+const scrollIndicator = document.getElementById('scrollIndicator');
+const scrollRing = document.getElementById('scrollRing');
+
+window.addEventListener('scroll', () => {
+    const scrollPercent = window.scrollY / window.innerHeight;
+    
+    if (scrollPercent > 0.3) {
+        scrollIndicator.classList.add('hidden');
+    } else {
+        scrollIndicator.classList.remove('hidden');
+        const opacity = 1 - (scrollPercent * 3);
+        const scale = 1 + (scrollPercent * 2);
+        scrollRing.style.opacity = opacity;
+        scrollRing.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+});
+
+scrollIndicator.addEventListener('click', () => {
+    document.getElementById('presentation').scrollIntoView({ behavior: 'smooth' });
+});
+
 const observerOptions = {
     threshold: 0.2,
     rootMargin: '0px 0px -100px 0px'
@@ -109,7 +130,7 @@ function getVisibleCards() {
 }
 
 function updateCarousel() {
-    const cardWidth = 380;
+    const cardWidth = 385;
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     
     const maxIndex = Math.max(0, track.children.length - getVisibleCards());
