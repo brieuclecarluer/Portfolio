@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brieuc Le Carluer - Portfolio</title>
+    <title>Brieuc Le Carluer — Portfolio</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="assets/2.png?v=2" />
 </head>
 <body>
+    <div class="lava-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
     <header id="header">
         <nav>
-            <a href="#hero" class="logo">BLC</a>
+            <a href="#hero" class="logo">LCB<span>.</span></a>
             <div class="burger" id="burger">
                 <span></span>
                 <span></span>
@@ -18,30 +24,36 @@
             </div>
             <ul id="nav-menu">
                 <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#parcours">Experiences</a></li>
-                <li><a href="#presentation">À Propos de moi</a></li>
+                <li><a href="#parcours">Expériences</a></li>
+                <li><a href="#presentation">À Propos</a></li>
                 <li><a href="#projets">Projets</a></li>
-                <li><a href="assets/CV.pdf" class="discover-btn">Mon Cv</a></li>
+                <li><a href="assets/CV.pdf" class="discover-btn">Mon CV</a></li>
             </ul>
         </nav>
     </header>
 
-     <section id="hero">
+    <section id="hero">
         <div class="hero-container">
             <div class="hero-text-zone">
-                <h1 class="hero-title">Brieuc Le Carluer</h1>
-                <h2 class="hero-subtitle">Cybersécurité</h2>
-                <h2 class="hero-subtitle">Étudiant ingénieur</h2>
+                <p class="hero-eyebrow">En recherche d'alternance</p>
+                <h1 class="hero-title">
+                    Brieuc
+                    <span class="name-accent">Le Carluer</span>
+                </h1>
+                <h2 class="hero-subtitle"><strong>Programation - Cybersécurité - Data</strong> · Étudiant ingénieur</h2>
                 <div class="hero-divider"></div>
                 <p class="hero-tagline">Étudiant en 3ème année à l'IUT de Nantes</p>
                 <p class="hero-tagline">Passionné par les nouvelles technologies</p>
                 <p class="hero-tagline">À la recherche d'opportunités innovantes</p>
             </div>
+
             <div class="hero-image-zone">
-                <img src="assets/stmalo.jpeg" alt="Brieuc Le Carluer">
+                <div class="hero-lava-frame">
+                    <img src="assets/stmalo.jpeg" alt="Brieuc Le Carluer">
+                </div>
             </div>
         </div>
-        
+
         <div class="scroll-indicator" id="scrollIndicator">
             <div class="scroll-circle">
                 <div class="scroll-ring" id="scrollRing"></div>
@@ -53,20 +65,22 @@
     </section>
 
     <section id="presentation">
-        <h2 class="section-title">À propos</h2>
-        <p>Étudiant en 3ème année à l'IUT de Nantes, je suis passionné par les nouvelles technologies et les langages de programmation. Envisageant une spécialisation dans la cybersécurité, et dans l'objectif de compléter ma formation d'ingénieur, je suis actuellement à la recherche d'un stage dans ce secteur.</p>
+        <h2 class="section-title">À <em data-text="propos">propos</em></h2>
+        <div class="about-card">
+            <p>Étudiant en 3ème année à l'IUT de Nantes, je suis passionné par les nouvelles technologies et les langages de programmation. Envisageant une spécialisation dans la cybersécurité, et dans l'objectif de compléter ma formation d'ingénieur, je suis actuellement à la recherche d'un stage dans ce secteur.</p>
+        </div>
     </section>
 
     <section id="parcours">
-        <h2 class="section-title">Parcours professionnel</h2>
+        <h2 class="section-title">Parcours <em data-text="professionnel">professionnel</em></h2>
 
         <div class="experience-item">
             <div class="experience-image">
                 <img src="assets/decathlon.jpg" alt="Decathlon">
             </div>
             <div class="experience-content">
-                <h3>Employé saisonnier - Decathlon</h3>
-                <div class="date">Juillet - Août 2024</div>
+                <h3>Employé saisonnier — Decathlon</h3>
+                <div class="date">Juillet — Août 2024</div>
                 <p>Déchargement de camion, mise en rayon de marchandises. Cette expérience m'a appris la rigueur et l'efficacité dans un environnement dynamique, tout en développant mes capacités d'adaptation et d'organisation.</p>
             </div>
         </div>
@@ -76,9 +90,9 @@
                 <img src="assets/acoss.png" alt="Stage ingénieur">
             </div>
             <div class="experience-content">
-                <h3>Stage - ACOSS Nantes</h3>
-                <div class="date">Avril 2025 - Juin 2025</div>
-                <p>Participation active au monitoring d'outils forensiques tels qu'ELK, TheHive et Velociraptor. Participation à la mise en œuvre de procédures de MCO des machines du COS. Ce stage était extremement enrichissant et m'as permis d'en apprendre enormement sur la place de la cybersecurité en entreprise.</p>
+                <h3>Stage — ACOSS Nantes</h3>
+                <div class="date">Avril 2025 — Juin 2025</div>
+                <p>Participation active au monitoring d'outils forensiques tels qu'ELK, TheHive et Velociraptor. Participation à la mise en œuvre de procédures de MCO des machines du COS. Ce stage était extrêmement enrichissant et m'a permis d'en apprendre énormément sur la place de la cybersécurité en entreprise.</p>
             </div>
         </div>
 
@@ -87,22 +101,37 @@
                 <img src="assets/gouessant.jpg" alt="Coopérative du Gouessant">
             </div>
             <div class="experience-content">
-                <h3>Employé Saisonnier - Coopérative du Gouessant</h3>
-                <div class="date">Juin - Août 2025</div>
-                <p>Réception des tracteurs, chargement de camion, gestion de magasin pour particulier. Cette première expérience dans le monde de l'agriculture et en petite équipe sur site m'as permis de bien comprendre les enjeux d'une bonne coordination.</p>
+                <h3>Employé Saisonnier — Coopérative du Gouessant</h3>
+                <div class="date">Juin — Août 2025</div>
+                <p>Réception des tracteurs, chargement de camion, gestion de magasin pour particulier. Cette première expérience dans le monde de l'agriculture et en petite équipe sur site m'a permis de bien comprendre les enjeux d'une bonne coordination.</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-image">
+                <img src="assets/safran.jpg" alt="Safran">
+            </div>
+            <div class="experience-content">
+                <h3>Stagiaire — Safran </h3>
+                <div class="date">Avril — Août 2026</div>
+                <p>Contribution à la transition d'un système de reporting en assurant le portage des fonctionnalités de l'ancien outil, le développement d'évolutions fonctionnelles et l'intégration de nouvelles sources de données après traitement et filtrage pour enrichir les tableaux de bord.</p>
             </div>
         </div>
 
         <div class="travel-section">
             <h3>Ma passion : la photographie</h3>
-            <div class="travel-slider">
-                <div class="travel-image-container">
-                    <img id="travelImage" src="assets/stemilion.jpeg" alt="Voyage">
-                    <div class="travel-overlay">
-                        <h4 id="travelTitle">Exploration urbaine</h4>
-                        <p id="travelDescription">Découvrir de nouvelles villes, seul ou entre amis, pour s'immerger dans différentes cultures et architectures.</p>
+            <div class="travel-carousel">
+                <button class="travel-carousel-nav prev" id="prevTravel">‹</button>
+                <div class="travel-slider">
+                    <div class="travel-image-container">
+                        <img id="travelImage" src="assets/stemilion.jpeg" alt="Voyage">
+                        <div class="travel-overlay">
+                            <h4 id="travelTitle">Exploration urbaine</h4>
+                            <p id="travelDescription">Découvrir de nouvelles villes, seul ou entre amis, pour s'immerger dans différentes cultures et architectures.</p>
+                        </div>
                     </div>
                 </div>
+                <button class="travel-carousel-nav next" id="nextTravel">›</button>
             </div>
             <div class="travel-nav">
                 <span class="travel-dot active" data-index="0"></span>
@@ -113,7 +142,7 @@
     </section>
 
     <section id="projets">
-        <h2 class="section-title">Mes projets</h2>
+        <h2 class="section-title">Mes <em data-text="projets">projets</em></h2>
         <div class="projects-carousel">
             <button class="carousel-nav prev" id="prevProject">‹</button>
             <div class="projects-wrapper">
@@ -122,62 +151,55 @@
                         <img src="assets/projets/portfolio.png" alt="Portfolio" class="project-image">
                         <div class="project-content">
                             <h3>Portfolio</h3>
-                            <p>Voici le code de mon projet - HTML/CSS/JS</p>
+                            <p>HTML / CSS / JS</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Terratruck/','_blank')">
                         <img src="assets/projets/terratruck.png" alt="Terratruck" class="project-image">
                         <div class="project-content">
                             <h3>Terratruck</h3>
-                            <p>Site vitrine - HTML/CSS - TCP</p>
+                            <p>Site vitrine — HTML / CSS — TCP</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/PFC/tree/main','_blank')">
                         <img src="assets/projets/pfc.png" alt="Pierre Feuille Ciseau" class="project-image">
                         <div class="project-content">
                             <h3>Pierre Feuille Ciseau</h3>
-                            <p>Pierre Feuille Ciseau sur terminal - Python</p>
+                            <p>Jeu terminal — Python</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/Quadtree','_blank')">
                         <img src="assets/projets/golang.png" alt="Quadtree" class="project-image">
                         <div class="project-content">
                             <h3>Quadtree</h3>
-                            <p>Projet de fin d'année - Golang</p>
+                            <p>Projet de fin d'année — Golang</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://brieuclecarluer.github.io/Terrier/', '_blank')">
                         <img src="assets/projets/terrier.png" alt="Terrier" class="project-image">
                         <div class="project-content">
                             <h3>Terrier</h3>
-                            <p>Platformer - HTML/JS</p>
+                            <p>Platformer — HTML / JS</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://gitlab.univ-nantes.fr/E235508M/laurelin','_blank')">
                         <img src="assets/projets/laurelin.png" alt="Laurelin" class="project-image">
                         <div class="project-content">
                             <h3>Laurelin</h3>
-                            <p>Web Site - Projet Scolaire - VueJS/PHP</p>
+                            <p>Projet Scolaire — VueJS / PHP</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/MicroService_Scan_Ordonnance-','_blank')">
                         <img src="assets/projets/OCR.png" alt="OCR" class="project-image">
                         <div class="project-content">
-                            <h3>Scanneur d'ordonance</h3>
-                            <p>Projet Scolaire - Spring Boot</p>
+                            <h3>Scanneur d'ordonnance</h3>
+                            <p>Projet Scolaire — Spring Boot</p>
                         </div>
                     </div>
-
                     <div class="project-card" onclick="window.open('https://github.com/brieuclecarluer/','_blank')">
-                        <div class="project-content">
-                            <h3>Poké-mod - à venir</h3>
-                            <p>Jeu - C - Mod</p>
+                        <div class="project-content" style="padding: 60px 28px;">
+                            <h3>Poké-mod — à venir</h3>
+                            <p>Jeu — C — Mod</p>
                         </div>
                     </div>
                 </div>
@@ -196,7 +218,7 @@
             </a>
         </div>
         <p>Rennes, Bretagne, France</p>
-        <p>© 2024 Brieuc Le Carluer. Tous droits réservés.</p>
+        <p>© 2025 Brieuc Le Carluer. Tous droits réservés.</p>
     </footer>
 
     <script src="main.js"></script>
