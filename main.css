@@ -252,7 +252,6 @@ nav a.active { color: var(--text); }
     border: 1px solid rgba(244,124,44,0.22);
     padding: 6px 16px;
     border-radius: 999px;
-    -webkit-text-stroke: 0.5px #000000;
 }
 
 .hero-eyebrow::before {
@@ -340,7 +339,6 @@ nav a.active { color: var(--text); }
     -webkit-text-stroke: 0.4px #fff;
 }
 
-/* Hero image — lava lamp shape */
 .hero-image-zone {
     flex: 1;
     max-width: 480px;
@@ -356,7 +354,6 @@ nav a.active { color: var(--text); }
     height: 520px;
 }
 
-/* The animated lava-lamp silhouette behind the photo */
 .hero-lava-frame::before {
     content: '';
     position: absolute;
@@ -407,7 +404,6 @@ nav a.active { color: var(--text); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── SCROLL INDICATOR ─── */
 .scroll-indicator {
     position: absolute;
     bottom: 44px;
@@ -489,14 +485,12 @@ nav a.active { color: var(--text); }
     60% { transform: translateX(-50%) translateY(3px); }
 }
 
-/* ═══════════════════════════════════════════
-   SHARED SECTION STYLES
-═══════════════════════════════════════════ */
+
 section { position: relative; z-index: 1; }
 
 .section-title {
     font-family: 'Fraunces', serif;
-    font-size: 52px;
+    font-size: 70px;
     font-weight: 300;
     font-style: italic;
     color: var(--text);
@@ -510,32 +504,17 @@ section { position: relative; z-index: 1; }
     background: linear-gradient(135deg, var(--amber), var(--coral));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff9f5;
     background-clip: text;
     font-style: normal;
     position: relative;
 }
 
 .section-title em::before {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-    letter-spacing: inherit;
-    -webkit-text-stroke: 3px white;
-    -webkit-text-fill-color: transparent;
-    z-index: -1;
+    display: none;
 }
 
 
-/* ═══════════════════════════════════════════
-   PRESENTATION / À PROPOS
-   — warm pill card, centred
-═══════════════════════════════════════════ */
 #presentation {
     padding: 120px 60px;
     max-width: 900px;

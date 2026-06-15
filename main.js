@@ -9,6 +9,97 @@ window.addEventListener('scroll', () => {
     }, 10);
 }, { passive: true });
 
+/* ═══════════════════════════════════════════
+   WHITE TEXT ON BLOB DETECTION
+═══════════════════════════════════════════ */
+function initWhiteOnBlobEffect() {
+    const elementsToWrap = document.querySelectorAll('.name-accent, .section-title em');
+    if (elementsToWrap.length === 0) return;
+
+    // Wrap all text nodes into letter spans
+    function wrapLetters(element) {
+        const walker = document.createTreeWalker(
+            element,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+        );
+
+        const nodesToReplace = [];
+        let node;
+        while (node = walker.nextNode()) {
+            if (node.textContent.trim()) {
+                nodesToReplace.push(node);
+            }
+        }
+
+        nodesToReplace.forEach(textNode => {
+            const fragment = document.createDocumentFragment();
+            [...textNode.textContent].forEach(char => {
+                if (char === ' ') {
+                    fragment.appendChild(document.createTextNode(' '));
+                } else {
+                    const span = document.createElement('span');
+                    span.className = 'text-letter';
+                    span.textContent = char;
+                    fragment.appendChild(span);
+                }
+            });
+            textNode.parentNode.replaceChild(fragment, textNode);
+        });
+    }
+
+    // Wrap letters in all target elements
+    elementsToWrap.forEach(element => {
+        wrapLetters(element);
+    });
+
+    // Blob detection function
+    const blobs = document.querySelectorAll('.blob');
+    const letters = document.querySelectorAll('.text-letter');
+
+    function updateBlobDetection() {
+        letters.forEach(letter => {
+            const letterRect = letter.getBoundingClientRect();
+            const letterCenterX = letterRect.left + letterRect.width / 2;
+            const letterCenterY = letterRect.top + letterRect.height / 2;
+
+            let isOnBlob = false;
+
+            blobs.forEach(blob => {
+                const blobRect = blob.getBoundingClientRect();
+                const blobCenterX = blobRect.left + blobRect.width / 2;
+                const blobCenterY = blobRect.top + blobRect.height / 2;
+
+                // Distance from letter to blob center
+                const dx = letterCenterX - blobCenterX;
+                const dy = letterCenterY - blobCenterY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                // Blob effective radius (more generous to catch letters better)
+                const blobRadius = (blobRect.width + blobRect.height) / 3.5;
+
+                if (distance < blobRadius) {
+                    isOnBlob = true;
+                }
+            });
+
+            letter.classList.toggle('white-on-blob', isOnBlob);
+        });
+
+        requestAnimationFrame(updateBlobDetection);
+    }
+
+    updateBlobDetection();
+}
+
+// Initialize on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWhiteOnBlobEffect);
+} else {
+    initWhiteOnBlobEffect();
+}
+
 // Smooth scroll navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
